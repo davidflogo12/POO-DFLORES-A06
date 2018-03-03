@@ -3,17 +3,18 @@
 
 int main() {
 
-    FormatoHora tiempo1 (12,24,10);
-    FormatoHora tiempo2 (9,56,56);
+    FormatoHora Hora1 ( 4,23,25);
+    FormatoHora Hora2 (2,5,57);
 
-    FormatoHora tiempofinal = tiempo1 + tiempo2;
-    FormatoHora tiempofinal2 = tiempo2 - tiempo1;
+    FormatoHora Hora3 = Hora1 + Hora2;
+    FormatoHora Hora4 = Hora2-Hora1;
 
-    std::cout<< tiempofinal.horas<< ":"<< tiempofinal.minutos<<":"tiempofinal.segundos;
-    std::cout<< tiempofinal2.horas<<":"<< tiempofinal2.minutos<<":"tiempofinal2.segundos;
+    std::string Hresult;
+    Hora3.to_String();
+    Hora4.to_string();
+    std::cout<< Hora3.horas<<","<<Hora3.minutos<<":"<<Hora3.segundos<<"\n";
+    std::cout<< Hora4.horas<<":"<<Hora4.minutos<<":"<<Hora4.segundos;
 
 
 
-
-
-    }
+}

@@ -6,30 +6,28 @@
 #define POO_DFLORES_A06_FORMATOHORA_H
 #include <iostream>
 
+#include <iostream>
 class FormatoHora {
 
-friend FormatoHora operator+ (const FormatoHora &hi, const FormatoHora &hf);
+    friend FormatoHora operator+ (const FormatoHora &hi, const FormatoHora &hf);
     friend FormatoHora operator- (const FormatoHora &hi, const FormatoHora &hf);
 
-
-
-
-
-
-//Metodos de la clase FormatoHora.
 public:
-    FormatoHora(int h, int m, int s);
-    int getHoras();
-    int getMinutos();
-    int getSegundos();
-    std::string to_String();
-    bool validaHrs(int);
-    bool validaMS(int);
-
+    FormatoHora(int h, int m , int s);
     int horas;
-    int minutos;
-    int segundos;
-};
+    static int minutos;
+    static int segundos;
 
+    int gethora();
+    int getminutos();
+    int getsegundos();
+
+    void sethora(int h);
+    void setminutos(int m);
+    void setsegundso(int s);
+    std::string to_String();
+    bool validar();
+
+};
 
 #endif //POO_DFLORES_A06_FORMATOHORA_H
